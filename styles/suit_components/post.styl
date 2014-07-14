@@ -1,0 +1,25 @@
+/** @define Post */
+
+@css {
+  @import "suitcss-utils-display";
+  @import "./avatar";
+}
+
+:root {
+  --Post-background-color: #fff
+}
+
+.Post {
+  background-color: var(--Post-background-color)
+  border-radius: 5px
+}
+
+
+.Post-content {
+  font-size: calc(18 / 16 + 0rem)
+  color: #000
+
+  &:hover {
+    color: green
+  }
+}

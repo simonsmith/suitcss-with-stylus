@@ -1,0 +1,24 @@
+/** @define Comment */
+
+@require '../mixins';
+
+@css {
+  @import "suitcss-utils-display";
+  @import "./avatar";
+}
+
+Comment-user-font-size = 24px
+
+:root {
+  --Comment-max-width: 700px
+  --Comment-background-color-sm: #ff0000
+}
+
+.Comment {
+  max-width: var(--Comment-max-width)
+}
+
+.Comment-user {
+  pinky()
+  font-size: Comment-user-font-size
+}
