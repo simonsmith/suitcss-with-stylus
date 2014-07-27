@@ -4,6 +4,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var rework       = require('gulp-rework');
 var stylus       = require('gulp-stylus');
 var clean        = require('gulp-clean');
+var reworkSuit   = require('rework-suit');
 var runSequence  = require('run-sequence');
 
 var paths = {
@@ -12,9 +13,14 @@ var paths = {
   tempFolder: './built/'
 };
 
+function handleError(err) {
+  console.log(err.toString());
+  this.emit('end');
+}
+
 gulp.task('compile-suit', function() {
   return gulp.src(paths.tempFolder + paths.mainCss)
-    .pipe(rework(require('rework-suit')()))
+    .pipe(rework(reworkSuit()).on('error', handleError))
     .pipe(gulp.dest('.'))
     .pipe(gulp.src(paths.tempFolder))
 });
