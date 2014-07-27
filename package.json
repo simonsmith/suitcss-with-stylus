@@ -17,7 +17,8 @@
     "gulp-print": "^1.1.0",
     "gulp-rework": "^0.4.0",
     "gulp-stylus": "^1.0.5",
-    "rework-suit": "^4.0.0"
+    "rework-suit": "^4.0.0",
+    "run-sequence": "^0.3.6"
   },
   "dependencies": {
     "normalize-css": "^2.3.1",
