@@ -27,7 +27,7 @@ gulp.task('compile-suit', function() {
 
 gulp.task('compile-stylus', function() {
   return gulp.src(paths.suitComponents)
-    .pipe(stylus())
+    .pipe(stylus().on('error', handleError))
     .pipe(autoprefixer())
     .pipe(gulp.dest(paths.tempFolder));
 });
