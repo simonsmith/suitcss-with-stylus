@@ -6,4 +6,4 @@ SUIT is an awesome way to structure components but I personally miss parts of Sa
 
 #### Why Stylus?
 
-It plays nice with the `--` custom property prefix and also allows `@imports` to be escaped with `@css {}` which is critical if you intend on using rework-npm.
+It plays nice with the `--` custom property prefix and also allows `@import` to be escaped with `@css {}` which is critical if you intend on using rework-npm.
