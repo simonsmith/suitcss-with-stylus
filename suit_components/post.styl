@@ -5,16 +5,21 @@
   @import "./avatar";
 }
 
-:root
-  --Post-background-color: #fff
+Post-background-color = #fff
+
+@require './functions'
+@require './theme'
 
 .Post
-  background-color: var(--Post-background-color)
+  background-color: Post-background-color
   border-radius: 5px
 
 .Post-content
-  font-size: calc(18 / 16 + 0rem)
+  font-size: rem(18)
   color: #000
+  // Alternatively you can use calc() here and it will go
+  // through the rework-calc tool
+  width: (100% / 3)
 
   &:hover
     color: green

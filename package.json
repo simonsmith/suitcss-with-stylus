@@ -1,7 +1,7 @@
 {
   "name": "stylus-suit",
   "version": "0.1.0",
-	"repository": "https://github.com/simonsmith/suitcss-with-stylus",
+  "repository": "https://github.com/simonsmith/suitcss-with-stylus",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -14,6 +14,7 @@
     "gulp-autoprefixer": "0.0.8",
     "gulp-concat": "^2.3.3",
     "gulp-notify": "^1.4.0",
+    "gulp-rename": "^1.2.0",
     "gulp-rework": "^0.4.0",
     "gulp-rimraf": "^0.1.0",
     "gulp-stylus": "^1.0.5",

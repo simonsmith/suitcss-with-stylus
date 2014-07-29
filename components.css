@@ -479,8 +479,6 @@ table {
 
 /** @define Avatar */
 
-
-
 .Avatar {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#c4d0ff));
   background-image: -webkit-linear-gradient(top, #fff 0%, #c4d0ff 100%);
@@ -492,29 +490,28 @@ table {
   border-radius: 5px;
 }
 
-
-
 .Comment {
   max-width: 700px;
   margin: 1.5625rem;
+  background-color: #9266cc;
 }
 
 .Comment-user {
-  font-size: 24px;
+  font-size: 0.875rem;
+  border: 1px solid #292f33;
 }
 
 /** @define Post */
 
-
-
 .Post {
-  background-color: #fff;
+  background-color: #ccd6dd;
   border-radius: 5px;
 }
 
 .Post-content {
   font-size: 1.125rem;
   color: #000;
+  width: 33.333333333333336%;
 }
 
 .Post-content:hover {

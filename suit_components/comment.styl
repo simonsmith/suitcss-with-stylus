@@ -1,23 +1,21 @@
 /** @define Comment */
 
-@require './functions';
-
 @css {
   @import "suitcss-utils-display";
   @import "./avatar";
 }
 
-// Using Stylus variables makes for a nicer syntax but you do
-// miss out on the SUIT conformance for custom properties.
-Comment-user-font-size = 24px
+Comment-background-color  = #aaa
+Comment-user-border-color = #ddd
 
-:root
-  --Comment-max-width: 700px
-  --Comment-background-color-sm: #ff0000
+@require './functions';
+@require './theme';
 
 .Comment
-  max-width: var(--Comment-max-width)
+  max-width: 700px
   margin: rem(25)
+  background-color: Comment-background-color
 
 .Comment-user
-  font-size: Comment-user-font-size
+  font-size: rem(14)
+  border: 1px solid Comment-user-border-color

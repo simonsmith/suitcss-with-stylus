@@ -1,0 +1,12 @@
+// -----------------------------------------------------------------------------
+// Use the `@css` keyword to output normal import statements
+// This ensures they get picked up by rework-npm and ignored by Stylus
+//
+// https://github.com/reworkcss/rework-npm
+// -----------------------------------------------------------------------------
+
+@css {
+  @import 'normalize-css';
+  @import './comment';
+  @import './post';
+}
