@@ -1,21 +1,21 @@
 {
   "name": "stylus-suit",
   "version": "0.1.0",
+	"repository": "https://github.com/simonsmith/suitcss-with-stylus",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Simon Smith",
   "license": "MIT",
   "devDependencies": {
     "gulp": "^3.8.6",
     "gulp-autoprefixer": "0.0.8",
-    "gulp-clean": "^0.3.1",
     "gulp-concat": "^2.3.3",
-    "gulp-filter": "^0.5.0",
-    "gulp-print": "^1.1.0",
+    "gulp-notify": "^1.4.0",
     "gulp-rework": "^0.4.0",
+    "gulp-rimraf": "^0.1.0",
     "gulp-stylus": "^1.0.5",
     "rework-suit": "^4.0.0",
     "run-sequence": "^0.3.6"
