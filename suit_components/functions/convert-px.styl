@@ -1,0 +1,18 @@
+/**
+ * Sizing functions for converting px to rem or em
+ * http://pxtoem.com/
+ */
+
+base = 16
+
+rem(size) {
+  convertPx(size, 0rem, base)
+}
+
+em(size) {
+  convertPx(size, 0em, base)
+}
+
+convertPx(size, unit-type, base) {
+  (size / base) + unit-type
+}
