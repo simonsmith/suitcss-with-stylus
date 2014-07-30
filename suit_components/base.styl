@@ -1,0 +1,46 @@
+/**
+ * Base styles
+ */
+
+/**
+ * Set media queries here for the SUIT grid
+ * Components can use these to react to grid changes, otherwise
+ * they set their own breakpoints based on the content
+ */
+@css {
+  @import 'normalize-css';
+  @custom-media --sm-viewport (min-width: 36.25em);
+  @custom-media --md-viewport (min-width: 49.375em);
+  @custom-media --lg-viewport (min-width: 72.1875em);
+}
+
+base-link-color =             #069
+base-link-color-hover =       base-link-color
+base-color =                  inherit
+base-font-family =            sans-serif
+base-font-size =              1rem
+
+@require './functions'
+@require './theme'
+
+html
+  box-sizing: border-box
+  font-size: base-font-size
+
+// http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+*, *::before, *::after
+  box-sizing: inherit
+
+body
+  font-family: base-font-family
+  color: base-color
+
+a
+  color: base-link-color
+
+  &:hover
+    color: base-link-color-hover
+
+img
+  max-width: 100%
+  height: auto
