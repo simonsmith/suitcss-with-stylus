@@ -522,6 +522,14 @@ img {
 
 /** @define Avatar */
 
+/**
+ * Image utilties
+ */
+
+.u-imgCircle {
+  border-radius: 50%;
+}
+
 .Avatar {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#c4d0ff));
   background-image: -webkit-linear-gradient(top, #fff 0%, #c4d0ff 100%);
