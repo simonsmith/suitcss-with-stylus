@@ -5,14 +5,11 @@
 
 base = 16
 
-rem(size) {
+rem(size)
   convertPx(size, 0rem, base)
-}
 
-em(size) {
+em(size)
   convertPx(size, 0em, base)
-}
 
-convertPx(size, unit-type, base) {
+convertPx(size, unit-type, base)
   (size / base) + unit-type
-}

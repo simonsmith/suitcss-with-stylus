@@ -2,12 +2,6 @@
  * Base styles
  */
 
-/**
- * Set media queries here for the SUIT grid
- * Components can use these to react to grid changes, otherwise
- * they set their own breakpoints based on the content
- */
-
 /*! normalize.css v2.1.3 | MIT License | git.io/normalize */
 
 /* ==========================================================================
@@ -568,3 +562,13 @@ img {
 .Post-content:hover {
   color: #008000;
 }
+
+/**
+ * Custom properties specifically for overriding SUIT components
+ */
+
+/**
+ * Set media queries here for the SUIT grid
+ * Components can use these to react to grid changes, otherwise
+ * they set their own breakpoints based on the content
+ */
