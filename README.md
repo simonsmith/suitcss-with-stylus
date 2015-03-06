@@ -16,7 +16,7 @@ Using [gulp](gulpjs.com) the SUIT components (written as Stylus files) are compi
 
 ### Treating SUIT as a global
 
-In this repo the dependencies of each component are listed as `@imports` so that rework-npm can work out the dependency tree. An alternative to this is to treat SUIT as a global library. This works well and can reduce the hassle of ensuring each component requires the write dependencies.
+In this repo the dependencies of each component are listed as `@imports` so that rework-npm can work out the dependency tree. An alternative to this is to treat SUIT as a global library. This works well and can reduce the hassle of ensuring each component requires the right dependencies.
 
 Example from `base.styl`:
 
