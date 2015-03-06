@@ -1,0 +1,130 @@
+/**
+ * This is the manifest for all your top level components.
+ * Use @css so that the imports are left alone by Stylus and picked up
+ * by Rework
+*/
+
+/**
+* Base styles and any SUIT vars
+*/
+
+/**
+* Placed in a CSS block so that they are picked up by Rework after
+* Stylus compilation
+*/
+
+html {
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+body {
+  font-family: "Fira Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.4;
+  color: #58585a;
+  background-color: #fff;
+}
+
+/** @define Comment; use strict */
+
+/**
+ * Display-type utilities
+ */
+
+.u-block {
+  display: block !important;
+}
+
+.u-hidden {
+  display: none !important;
+}
+
+/**
+ * Completely remove from the flow but leave available to screen readers.
+ */
+
+.u-hiddenVisually {
+  position: absolute !important;
+  overflow: hidden !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+}
+
+.u-inline {
+  display: inline !important;
+}
+
+/**
+ * 1. Fix for Firefox bug: an image styled `max-width:100%` within an
+ * inline-block will display at its default size, and not limit its width to
+ * 100% of an ancestral container.
+ */
+
+.u-inlineBlock {
+  display: inline-block !important;
+  max-width: 100%;
+  /* 1 */
+}
+
+.u-table {
+  display: table !important;
+}
+
+.u-tableCell {
+  display: table-cell !important;
+}
+
+.u-tableRow {
+  display: table-row !important;
+}
+
+/** @define Avatar; use strict */
+
+/**
+ * Image utilties
+ */
+
+.u-imgCircle {
+  border-radius: 50%;
+}
+
+.Avatar {
+  background-image: -webkit-linear-gradient(top, #fff 0%, #c4d0ff 100%);
+  background-image: linear-gradient(to bottom, #fff 0%, #c4d0ff 100%);
+}
+
+.Avatar-img {
+  display: block;
+  border-radius: 5px;
+}
+
+.Comment {
+  max-width: 700px;
+  margin: 1.563rem;
+  background-color: #aaa;
+}
+
+.Comment-user {
+  font-size: 0.875rem;
+  border: 1px solid #ddd;
+}
+
+/** @define Post; use strict */
+
+.Post {
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.Post-content {
+  font-size: 1.125rem;
+  color: #000;
+  width: 33.333333333333336%;
+}
+
+.Post-content:hover {
+  color: #008000;
+}

@@ -1,6 +1,6 @@
 var gulp  = require('gulp');
-var paths = require('../util/paths');
+var paths = require('../paths');
 
 gulp.task('watch', function() {
-  gulp.watch(paths.componentsSrc, ['css']);
+  gulp.watch(paths.css.stylusSrc, ['css']);
 });

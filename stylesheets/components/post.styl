@@ -1,0 +1,22 @@
+/** @define Post; use strict */
+
+@css {
+  @import "suitcss-utils-display";
+  @import "./avatar";
+}
+
+$Post-bgColor = #fff
+
+@require "../base/functions"
+
+.Post
+  background-color $Post-bgColor
+  border-radius 5px
+
+.Post-content
+  font-size px(18)
+  color: #000
+  width (100% / 3)
+
+  &:hover
+    color green

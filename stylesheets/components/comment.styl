@@ -1,0 +1,20 @@
+/** @define Comment; use strict */
+
+@css {
+  @import "suitcss-utils-display";
+  @import "./avatar";
+}
+
+$Comment-bgColor =          #aaa
+$Comment-user-borderColor = #ddd
+
+@require "../base/functions";
+
+.Comment
+  max-width 700px
+  margin px(25)
+  background-color $Comment-bgColor
+
+.Comment-user
+  font-size px(14)
+  border 1px solid $Comment-user-borderColor

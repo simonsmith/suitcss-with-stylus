@@ -1,0 +1,26 @@
+/**
+* Base styles and any SUIT vars
+*/
+
+/**
+* Placed in a CSS block so that they are picked up by Rework after
+* Stylus compilation
+*/
+@css {
+  @custom-media --sm-viewport (min-width: 36.25em);
+  @custom-media --md-viewport (min-width: 49.375em);
+  @custom-media --lg-viewport (min-width: 72.1875em);
+}
+
+@require "vars";
+@require "functions";
+
+html
+  box-sizing border-box
+  font-size ($font-size-base / 16)rem
+
+body
+  font-family $brand-font, $font-family-base
+  line-height $line-height-base
+  color $text-color
+  background-color #fff
