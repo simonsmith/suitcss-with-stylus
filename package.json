@@ -1,8 +1,8 @@
 {
   "name": "stylus-suit",
-  "version": "1.0.0",
-  "repository": "https://github.com/simonsmith/suitcss-with-stylus",
+  "version": "1.0.1",
   "description": "",
+  "repository": "https://github.com/simonsmith/suitcss-with-stylus",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
