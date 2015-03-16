@@ -8,7 +8,7 @@ var bemLinter =   require('postcss-bem-linter');
 var atImport  =   require('postcss-import');
 var cssnext   =   require('cssnext');
 var del =         require('del');
-var handleError = require('../util/handleError');
+var notifyError = require('../notifyError');
 var paths =       require('../paths');
 
 /**
@@ -16,7 +16,7 @@ var paths =       require('../paths');
  */
 gulp.task('stylus', function() {
   return gulp.src(paths.css.stylusSrc)
-    .pipe(stylus().on('error', handleError))
+    .pipe(stylus().on('error', notifyError))
     .pipe(gulp.dest(paths.css.tmpDir));
 });
 
@@ -28,7 +28,7 @@ gulp.task('bemlint', ['stylus'], function() {
     .pipe(clip())
     .pipe(postcss([
       bemLinter(),
-    ]).on('error', handleError))
+    ]).on('error', notifyError))
 });
 
 /**
@@ -39,7 +39,7 @@ gulp.task('postcss', ['stylus', 'bemlint'], function() {
     .pipe(postcss([
       atImport(),
       cssnext()
-    ]).on('error', handleError))
+    ]).on('error', notifyError))
     .pipe(rename(paths.css.builtFile));
 });
 
