@@ -1,49 +1,51 @@
-var gulp =          require('gulp');
-var autoprefixer =  require('gulp-autoprefixer');
-var stylus =        require('gulp-stylus');
-var rework =        require('gulp-rework');
-var rename =        require('gulp-rename');
-var runSequence =   require('run-sequence');
-var path =          require('path');
-var reworkSuit =    require('rework-suit');
-var del =           require('del');
-var handleError =   require('../util/handleError');
-var paths =         require('../paths');
+var path =        require('path');
+var gulp =        require('gulp');
+var stylus =      require('gulp-stylus');
+var rename =      require('gulp-rename');
+var postcss   =   require('gulp-postcss');
+var bemLinter =   require('postcss-bem-linter');
+var atImport  =   require('postcss-import');
+var cssnext   =   require('cssnext');
+var del =         require('del');
+var handleError = require('../util/handleError');
+var paths =       require('../paths');
 
 /**
- * Compile all the Stylus components into individual CSS files, ready to be
- * passed through the SUIT tools.
- * */
+ * Compile all Stylus into CSS files, placed in a temp directory
+ */
 gulp.task('stylus', function() {
   return gulp.src(paths.css.stylusSrc)
     .pipe(stylus().on('error', handleError))
-    .pipe(autoprefixer('last 2 versions', '> 1%', 'ie 9', 'Firefox ESR', 'Opera 12.1').on('error', handleError))
     .pipe(gulp.dest(paths.css.tmpDir));
 });
 
 /**
- * Put all the CSS components through the Rework SUIT plugin
- * */
-gulp.task('suit', function() {
-  return gulp.src(path.join(paths.css.tmpDir, paths.css.mainFile))
-    .pipe(rework(
-      reworkSuit()
-    ).on('error', handleError))
-    .pipe(rename(paths.css.builtFile))
-    .pipe(gulp.dest(paths.css.dest));
+ * Lint all built CSS files individually
+ */
+gulp.task('bemlint', ['stylus'], function() {
+  return gulp.src(path.join(paths.css.tmpDir, '**/*.css'))
+    .pipe(postcss([
+      bemLinter(),
+    ]).on('error', handleError))
 });
 
 /**
- * Clean up the compiled CSS files as no longer needed
+ * Process CSS files with PostCSS and generate built file
+ */
+gulp.task('postcss', ['stylus', 'bemlint'], function() {
+  return gulp.src(path.join(paths.css.tmpDir, paths.css.mainFile))
+    .pipe(postcss([
+      atImport(),
+      cssnext()
+    ]).on('error', handleError))
+    .pipe(rename(paths.css.builtFile));
+});
+
+/**
+ * Nuke temp CSS files
  * */
-gulp.task('clean', function(cb) {
+gulp.task('clean', ['stylus', 'bemlint', 'postcss'], function(cb) {
   del([paths.css.tmpDir], cb);
 });
 
-gulp.task('css', function() {
-  runSequence(
-    'stylus',
-    'suit',
-    'clean'
-  );
-});
+gulp.task('css', ['stylus', 'bemlint', 'postcss', 'clean']);
