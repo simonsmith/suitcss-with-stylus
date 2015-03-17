@@ -40,7 +40,8 @@ gulp.task('postcss', ['stylus', 'bemlint'], function() {
       atImport(),
       cssnext()
     ]).on('error', notifyError))
-    .pipe(rename(paths.css.builtFile));
+    .pipe(rename(paths.css.builtFile))
+    .pipe(gulp.dest(paths.css.dest));
 });
 
 /**
