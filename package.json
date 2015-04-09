@@ -10,18 +10,18 @@
   "author": "Simon Smith",
   "license": "MIT",
   "devDependencies": {
-    "cssnext": "^1.1.0",
+    "cssnext": "^1.2.1",
     "del": "^1.1.1",
     "gulp": "^3.8.11",
     "gulp-clip-empty-files": "^0.1.1",
     "gulp-concat": "^2.5.2",
     "gulp-notify": "^2.2.0",
-    "gulp-postcss": "^4.0.3",
-    "gulp-rename": "^1.2.0",
+    "gulp-postcss": "^5.0.1",
+    "gulp-rename": "^1.2.2",
     "gulp-stylus": "^2.0.1",
     "postcss-bem-linter": "^0.2.0",
-    "postcss-import": "^5.0.3",
-    "require-dir": "^0.1.0"
+    "postcss-import": "^5.1.0",
+    "require-dir": "^0.3.0"
   },
   "dependencies": {
     "normalize-css": "^2.3.1",
