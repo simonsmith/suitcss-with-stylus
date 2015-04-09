@@ -1,13 +1,12 @@
 var path = require('path');
-var cssDir = path.resolve('./stylesheets');
 
 var paths = {
   css: {
-    stylusSrc: path.join(cssDir, '**/*.styl'),
-    dest: cssDir,
+    stylusSrc: path.resolve('./stylus/**/*.styl'),
+    dest: './dist',
     tmpDir: path.resolve('./.css-compiled'),
     mainFile: 'main.css',
-    builtFile: 'components.built.css'
+    builtFile: 'components.css'
   }
 };
 
