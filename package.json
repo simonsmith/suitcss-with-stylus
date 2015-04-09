@@ -1,6 +1,6 @@
 {
   "name": "stylus-suit",
-  "version": "1.1",
+  "version": "2.0.4",
   "description": "",
   "repository": "https://github.com/simonsmith/suitcss-with-stylus",
   "main": "index.js",
@@ -20,8 +20,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-stylus": "^2.0.1",
     "postcss-bem-linter": "^0.2.0",
-    "postcss-import": "^5.1.0",
-    "require-dir": "^0.3.0"
+    "postcss-import": "^5.1.0"
   },
   "dependencies": {
     "normalize-css": "^2.3.1",
