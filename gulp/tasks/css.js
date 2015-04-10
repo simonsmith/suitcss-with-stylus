@@ -5,7 +5,6 @@ var rename =      require('gulp-rename');
 var postcss   =   require('gulp-postcss');
 var clip =        require('gulp-clip-empty-files');
 var bemLinter =   require('postcss-bem-linter');
-var atImport  =   require('postcss-import');
 var cssnext   =   require('cssnext');
 var del =         require('del');
 var notifyError = require('../notifyError');
@@ -37,7 +36,6 @@ gulp.task('bemlint', ['stylus'], function() {
 gulp.task('postcss', ['stylus', 'bemlint'], function() {
   return gulp.src(path.join(paths.css.tmpDir, paths.css.mainFile))
     .pipe(postcss([
-      atImport(),
       cssnext()
     ]).on('error', notifyError))
     .pipe(rename(paths.css.builtFile))
