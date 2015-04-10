@@ -10,7 +10,7 @@
   "author": "Simon Smith",
   "license": "MIT",
   "devDependencies": {
-    "cssnext": "^1.2.1",
+    "cssnext": "^1.2.3",
     "del": "^1.1.1",
     "gulp": "^3.8.11",
     "gulp-clip-empty-files": "^0.1.1",
@@ -19,8 +19,7 @@
     "gulp-postcss": "^5.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-stylus": "^2.0.1",
-    "postcss-bem-linter": "^0.2.0",
-    "postcss-import": "^5.1.0"
+    "postcss-bem-linter": "^0.2.0"
   },
   "dependencies": {
     "normalize-css": "^2.3.1",
